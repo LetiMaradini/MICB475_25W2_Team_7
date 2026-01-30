@@ -20,11 +20,19 @@
 * https://osdr.nasa.gov/bio/repo/data/studies/OSD-199
 * https://osdr.nasa.gov/bio/repo/data/studies/OSD-72
 * https://osdr.nasa.gov/bio/repo/data/studies/OSD-191
+* https://osdr.nasa.gov/bio/repo/data/studies/OSD-200
+* https://osdr.nasa.gov/bio/repo/data/studies/OSD-212
 
+other microgravity/16S papers 
+https://pubmed.ncbi.nlm.nih.gov/35796811/ 
 
 Send email about opioid dataset to Evelyn
 
-Send email about inflammation/chronic injury from sports i.e baseball
+Inflammation/chronic injury from sports i.e baseball
+could not find any papers
+
+Microgravity effects on immune cells 
+https://faseb.onlinelibrary.wiley.com/doi/full/10.1096/fj.202001428R?saml_referrer
 
 
 ## MS dataset
