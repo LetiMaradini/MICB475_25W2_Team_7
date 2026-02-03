@@ -29,8 +29,13 @@ Analysis:
 ## meeting suggestions
 
 use ISS server data to look at abiotic microbiome vs astronaut oral microbiome (OSD-280)
+- combine datasets (would need to normalize)
+
 or
+
 use OSD-417 looking at microgravity affect on rodent gut microbiome
+- functional analysis
+- machine model
 
 
 
