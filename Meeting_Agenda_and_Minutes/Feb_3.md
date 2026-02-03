@@ -60,5 +60,9 @@ if significant results
 - machine learning model (prediction)
 
 
+notes:
+Data should be processed to table.qza in Qiime2 for the proposal
+Always check with Ritu before trimming data etc
+Upload files after each step in Qiime2 to GitHub for backup
 
 
