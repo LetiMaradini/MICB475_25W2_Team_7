@@ -50,8 +50,10 @@ Workflow
 - core microbiome (how many shared vs unique microbes)
 - annotated taxa (presence + abundance microbes in samples, and association with parameters)
 - DESeq (abundance difference)
+  
 if not significant results
 - functional analysis
+  
 if significant results
 - machine learning model (prediction)
 
