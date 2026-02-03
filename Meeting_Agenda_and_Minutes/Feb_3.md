@@ -26,7 +26,11 @@ Analysis:
 - identify shared ASVs, see if certain ISS microbes are found in astronaut’s oral microbiome (pre-flight vs during vs post-flight)
 - compare the diversity of human-associated microbes in the ISS environment surfaces to the expected decrease in diversity in astronaut oral microbiome (i.e do ISS surfaces containing more human-associated microbes stabilize the astronaut’s salivary microbiome?)
 
+## meeting suggestions
 
+use ISS server data to look at abiotic microbiome vs astronaut oral microbiome (OSD-280)
+or
+use OSD-417 looking at microgravity affect on rodent gut microbiome
 
 
 
