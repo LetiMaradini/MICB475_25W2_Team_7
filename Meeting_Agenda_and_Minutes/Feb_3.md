@@ -15,6 +15,20 @@
 
 
 
+## Lila novel research idea
+
+Research question: How does the ISS’ environmental microbiome affect the observed dysbiotic shifts in human oral microbiome during spaceflight?
+
+Datasets: use OSD-280 (astronaut salivary microbiome) + OSD-417 (ISS dust/bioaerosols) + OSD-72 (ISS environmental surface microbes)
+
+Analysis: 
+- quantify % of astronaut salivary microbiome that originates from ISS dust vs surfaces
+- identify shared ASVs, see if certain opportunistic pathogens (in ISS dust) are found in astronaut’s oral microbiome (pre-flight vs during vs post-flight)
+- compare the diversity of human-associated microbes in the ISS environment surfaces to the expected decrease in diversity in astronaut oral microbiome (i.e do ISS surfaces containing more human-associated microbes stabilize the astronaut’s salivary microbiome?)
+
+
+
+
 
 
 
