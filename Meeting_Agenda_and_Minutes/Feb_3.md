@@ -40,6 +40,21 @@ use OSD-417 looking at microgravity affect on rodent gut microbiome
 => would be end heavy
 
 
+## Selected topic
+
+OSD-417 dataset: Specific Host Metabolite and Gut Microbiome Alterations Are Associated with Bone-loss During Spaceflight
+
+Workflow
+- process through QIIME
+- compare diversity metrics
+- core microbiome (how many shared vs unique microbes)
+- annotated taxa (presence + abundance microbes in samples, and association with parameters)
+- DESeq (abundance difference)
+if not significant results
+- functional analysis
+if significant results
+- machine learning model (prediction)
+
 
 
 
