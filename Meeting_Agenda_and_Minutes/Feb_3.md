@@ -1,6 +1,6 @@
-February 3rd pre-meeting notes
+# February 3rd pre-meeting notes
 
-NASA datasets that work
+## NASA datasets that work
 
 - Space environmental factor impacts upon murine colon microbiota and mucosal homeostasis (OSD-72)
 - Temporal dynamics of the gut microbiota in people sharing a confined environment, a 520-day ground-based space simulation, MARS500 (OSD-191)
