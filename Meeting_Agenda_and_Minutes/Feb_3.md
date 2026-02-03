@@ -65,4 +65,31 @@ notes:
 - Always check with Ritu before trimming data etc
 - Upload files after each step in Qiime2 to GitHub for backup
 
+## Anson's Notes
+
+effect of microgravity on gut microbiome in space document
+- label is bone loss (but isn’t bone loss)
+
+combining 280 and osd 272 
+surface microbiome and oral microbiome on the ISS and see whether iss acts as buffer or amplifier to oral microobiome (both osds) compare and see what percentage (beta diversity metrics) to see how distant and close the microbiomes are and distance between pre and post flights. 
+
+- idea is nice but can’t do so because you can’t compare mice and human (one on server called ISS is human (the one where they looked at different surfaces) 
+- osd 191
+- compare oral microbiome vs abiotic surfaces 
+- the one on the server is very small so yeah. you have to e careful
+- control (group and take fecal sample in week 45) 
+- space and euthanize mice but both still ahve ground controls)
+- 1 (diversity metrics)
+- 2 (core microbiome
+- 3 indicator taxa
+- 4 deseq
+- if data not significant than functional analysis (elevates project a little) —> piecrust 2 (kind of like kegg pathways)
+- if data is signficiant then machine learning (random forced) there is code on the modules so 
+- diversity metrics will give us a sense of if there is anu difference on a community level
+- core microbiome see if there is any venn diagram any difference
+- indicator taxa anything indicative conditions 
+- could bin all ground samples so see which groups available 
+- deseq —> to see if there is a expression difference
+- if taxanomically not different than functionally it might be different 
+- will have to have this data processed in qiime before the proposal
 
