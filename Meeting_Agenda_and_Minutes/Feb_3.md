@@ -35,7 +35,7 @@ or
 
 use OSD-417 looking at microgravity affect on rodent gut microbiome
 - functional analysis
-- machine model
+- build machine learning model
 
 
 
