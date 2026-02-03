@@ -5,6 +5,7 @@ Anson Mo, Eric Ai, Kira Wong, Leticia Maradini, Lila Bullock
 ### January
 [January 27](Meeting_Agenda_and_Minutes/Jan_27.md)
 
+### February 3
 
 ## Lab Notebook
 
