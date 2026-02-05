@@ -10,5 +10,6 @@ Anson Mo, Eric Ai, Kira Wong, Leticia Maradini, Lila Bullock
 
 ## Lab Notebook
 * [P01](Lab_Notebook/P01.md) - QIIME 2 Importing and demultiplexing microgravity dataset
+* [P02](Lab_Notebook/P02.md) - QIIME 2 Denoising and Clustering
 
 ## Scripts
