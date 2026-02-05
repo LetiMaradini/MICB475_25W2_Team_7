@@ -13,4 +13,4 @@ Anson Mo, Eric Ai, Kira Wong, Leticia Maradini, Lila Bullock
 * [P02](Lab_Notebook/P02.md) - QIIME 2 Denoising and Clustering
 
 ## Scripts
-[QIIME 2](Scripts/QIIME 2)
+[QIIME 2](Scripts/QIIME_2.txt)
