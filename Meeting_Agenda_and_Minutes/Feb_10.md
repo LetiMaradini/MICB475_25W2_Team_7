@@ -1,7 +1,5 @@
 Proposal - focus for now
 
-Proposal - focus for now
-
 1, 7 and 8? as a team
 
 2) Introduction and Background Lila
