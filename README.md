@@ -6,8 +6,7 @@ Anson Mo, Eric Ai, Kira Wong, Leticia Maradini, Lila Bullock
 [January 27](Meeting_Agenda_and_Minutes/Jan_27.md)
 
 ### February 
-[February 3](Meeting_Agenda_and_Minutes/Feb_3.md) 
-[February 10](Meeting_Agenda_and_Minutes/Feb_10.md)
+[February 3](Meeting_Agenda_and_Minutes/Feb_3.md) | [February 10](Meeting_Agenda_and_Minutes/Feb_10.md)
 
 ## Lab Notebook
 * [P01](Lab_Notebook/P01.md) - QIIME 2 Importing and demultiplexing microgravity dataset
