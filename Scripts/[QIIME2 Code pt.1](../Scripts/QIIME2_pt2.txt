@@ -1,0 +1,56 @@
+# Move to working directory
+cd /data/microgravity_project
+
+# Taxonomic analysis 
+qiime feature-classifier classify-sklearn \
+  --i-classifier /datasets/classifiers/silva-138-99-515-806-nb-classifier.qza \
+  --i-reads rep-seqs.qza \
+  --o-classification taxonomy.qza
+
+qiime metadata tabulate \
+  --m-input-file taxonomy.qza \
+  --o-visualization taxonomy.qzv
+  
+# Taxonomy barplots 
+qiime taxa barplot \
+  --i-table table.qza \
+  --i-taxonomy taxonomy.qza \
+  --m-metadata-file /datasets/project_2/microgravity/microgravity_metadata.tsv \
+  --o-visualization taxa-bar-plots.qzv
+
+# Filtering (taxonomy-based) 
+qiime taxa filter-table \
+  --i-table table.qza \
+  --i-taxonomy taxonomy.qza \
+  --p-exclude mitochondria,chloroplast \
+  --o-filtered-table table-no-mitochondria-no-chloroplast.qza
+
+# Summarizing 
+qiime feature-table summarize \
+  --i-table table-no-mitochondria-no-chloroplast.qza \
+  --o-visualization table-no-mitochondria-no-chloroplast.qzv \
+  --m-sample-metadata-file /datasets/project_2/microgravity/microgravity_metadata.tsv
+
+# Generate a tree for phylogenetic diversity analyses 
+qiime phylogeny align-to-tree-mafft-fasttree \
+  --i-sequences rep-seqs.qza \
+  --o-alignment aligned-rep-seqs.qza \
+  --o-masked-alignment masked-aligned-rep-seqs.qza \
+  --o-tree unrooted-tree.qza \
+  --o-rooted-tree rooted-tree.qza 
+
+# Alpha-rarefaction first resolution of curve (p-max-depth set at 159,000 because the maximum library size for one of the samples was 159,209 (from the table-no-mitochondria-no-chloroplast.qzv file) 
+qiime diversity alpha-rarefaction \
+  --i-table table.qza \
+  --i-phylogeny rooted-tree.qza \
+  --p-max-depth 159000 \
+  --m-metadata-file /datasets/project_2/microgravity/microgravity_metadata.tsv \
+  --o-visualization alpha-rarefaction.qzv
+
+# Calculate alpha- and beta-diversity metrics (chosen rarefraction factor to be 64,411 because keeps highest number of features and samples (from the table-no-mitochondria-no-chloroplast.qzv file), while plateauing for observed features (from alpha-rarefaction.qzv)
+qiime diversity core-metrics-phylogenetic \
+  --i-phylogeny rooted-tree.qza \
+  --i-table table-no-mitochondria-no-chloroplast.qza \
+  --p-sampling-depth 64411 \
+  --m-metadata-file /datasets/project_2/microgravity/microgravity_metadata.tsv \
+  --output-dir core-metrics-results
