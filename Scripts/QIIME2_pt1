@@ -1,0 +1,38 @@
+# !/bin/bash
+
+# Create a directory for the project and navigate to it
+mkdir /data/microgravity_project
+cd /data/microgravity_project
+
+# Import data while working directory is `/data/microgravity_project`
+qiime tools import \
+  --type "SampleData[PairedEndSequencesWithQuality]" \
+  --input-format PairedEndFastqManifestPhred33V2 \
+  --input-path /datasets/project_2/microgravity/microgravity_manifest.tsv \
+  --output-path /data/microgravity_project/demux_seqs.qza
+
+# Create visualization of demultiplexed samples 
+qiime demux summarize \
+  --i-data demux_seqs.qza \
+  --o-visualization demux_seqs.qzv
+
+# Determine ASVs with DADA2
+qiime dada2 denoise-paired \
+  --i-demultiplexed-seqs demux_seqs.qza \
+  --p-trim-left-f 0 \
+  --p-trim-left-r 0 \
+  --p-trunc-len-f 150 \
+  --p-trunc-len-r 140 \
+  --o-representative-sequences rep-seqs.qza \
+  --o-table table.qza \
+  --o-denoising-stats stats.qza
+
+# Visualize ASVs stats
+qiime feature-table summarize \
+  --i-table table.qza \
+  --o-visualization table.qzv \
+  --m-sample-metadata-file /datasets/project_2/microgravity/microgravity_metadata.tsv
+
+qiime feature-table tabulate-seqs \
+  --i-data rep-seqs.qza \
+  --o-visualization rep-seqs.qzv
