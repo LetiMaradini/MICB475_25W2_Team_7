@@ -1,5 +1,5 @@
 ## Meeting agenda ##
-- Discuss and go over proposal:
+Discuss and go over proposal:
   * Add more background to introduction
   * Further expanding and clarifying the comparison groups (experimental aims)
       * Decide groups used for comparision (planning to use model to predict all of the complex scenarios, or aiming to predict gravity versus no gravity?)
