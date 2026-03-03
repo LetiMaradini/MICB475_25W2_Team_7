@@ -18,5 +18,5 @@
   * Compare controls (week 9 after euthanasia): GC-LAR x GC-ISST
   * Compare control and basal (week 0 after euthanasia): GC-LAR and Basal
  
-  * For DESeq, blast the ones that do not have identification
-  * Remove the pre-euthasia
+* For DESeq, blast the ones that do not have identification
+* Remove the pre-euthasia data from the phyloseq object
