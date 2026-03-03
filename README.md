@@ -14,7 +14,7 @@ Anson Mo, Eric Ai, Kira Wong, Leticia Maradini, Lila Bullock
 ## Lab Notebook
 * [P01](Lab_Notebook/P01.md) - QIIME 2 Importing and demultiplexing microgravity dataset
 * [P02](Lab_Notebook/P02.md) - QIIME 2 Denoising and clustering
-* [P03](Lab_Notebook/P03.md) - Rstudio Phyloseq Object
+* [P03](Lab_Notebook/P03.md) - RStudio Phyloseq Object
 
 ## Scripts
 [QIIME 2 Importing and demultiplexing microgravity dataset](Scripts/QIIME2_pt1.txt)
