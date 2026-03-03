@@ -80,3 +80,4 @@ micro_rare <- rarefy_even_depth(micro_final, rngseed = 1, sample.size = 64411) #
 ##### Saving #####
 save(micro_final, file="micro_final.RData") #rarefaction not always needed
 save(micro_rare, file="micro_rare.RData") #needed for diversity metrics
+
