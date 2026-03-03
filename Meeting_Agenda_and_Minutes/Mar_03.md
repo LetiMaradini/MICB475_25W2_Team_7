@@ -12,10 +12,10 @@
 ## Meeting notes ##
 * Groups to be compared (add to the aims):
   * Difference between microgravity and control: F-ISST x GC-ISST
-  * Difference between time-points (0, 4.5, and 9 weeks after euthanasia): GC-LAR and F-LAR
-  * Difference between the same time-points (0, 4.5, and 9 weeks after euthanasia): GC-LAR and F-LAR
-  * Difference between return (time for recovery) and flight (9 weeks after euthanasia): F-ISST and F-LAR
-  * Compare controls (week 9 after euthanasia): GC-LAR x GC-ISST
+  * Difference between different time-points within the same cohort (0, 4.5, and 9 weeks after euthanasia): GC-LAR and F-LAR
+  * Difference between the same time-points in the cohorts (0, 4.5, and 9 weeks after euthanasia): GC-LAR x F-LAR
+  * Difference between return (time for recovery) and flight (both at 9 weeks after euthanasia): F-ISST x F-LAR
+  * Compare controls (at week 9 after euthanasia): GC-LAR x GC-ISST
   * Compare control and basal (week 0 after euthanasia): GC-LAR and Basal
  
 * For DESeq, blast the ones that do not have identification
