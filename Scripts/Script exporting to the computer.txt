@@ -1,0 +1,21 @@
+# Exporting qiime files from server to local computer
+
+cd /data/microgravity_export
+
+qiime tools export \
+  --input-path /data/microgravity_project/table-no-mitochondria-no-chloroplast.qza \
+  --output-path table-no-mitochondria-no-chloroplast_export
+
+qiime tools export \
+  --input-path /data/microgravity_project/taxonomy.qza \
+  --output-path taxonomy_export
+
+qiime tools export \
+  --input-path /data/microgravity_project/rooted-tree.qza \
+  --output-path rooted-tree_export
+
+# Converting .biom file into .txt file (feature-table)
+
+cd /data/microgravity_export/table-no-mitochondria-no-chloroplast_export
+
+biom convert -i feature-table.biom --to-tsv -o feature-table.txt
