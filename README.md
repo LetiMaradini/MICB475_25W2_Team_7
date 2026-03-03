@@ -18,6 +18,9 @@ Anson Mo, Eric Ai, Kira Wong, Leticia Maradini, Lila Bullock
 
 ## Scripts
 [QIIME 2 Importing and demultiplexing microgravity dataset](Scripts/QIIME2_pt1.txt)
+
 [QIIME 2 Denoising and clustering](Scripts/QIIME2_pt2.txt)
+
 [QIIME 2 Exporting](Scripts/QIIME2_pt3.txt)
+
 [RStudio Phyloseq object](Scripts/Phyloseq_object.R)
