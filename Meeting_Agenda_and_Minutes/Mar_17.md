@@ -10,7 +10,17 @@
   - exposure to microgravity (space conditions or recovery, some exposure to microgravity): F-ISST week 9, ⁠F-LAR week 4.5, F-LAR week 9
   - no exposure to microgravity (space conditions or terrestrial conditions, no microgravity): GC-ISST week 9, GC-LAR week 0, GC-LAR week 4.5, ⁠GC-LAR week 9,  F-LAR week 0
   - Control: BL week 0
-
+   ISA-2: for all treatments:
+   - F-ISST week 9
+   - ⁠GC-ISST week 9
+   - ⁠F-LAR week 0
+   - ⁠F-LAR week 4.5
+   - ⁠F-LAR week 9
+   - ⁠GC-LAR week 0
+   - ⁠GC-LAR week 4.5
+   - ⁠GC-LAR week 9
+   - ⁠BL
+  
  ## Pre-meeting agenda: ##
 - Go over RF (Eric) from Kira's results
 - Maybe discuss some of other results/check what is important to keep/how to approach?
