@@ -15,6 +15,11 @@ Anson Mo, Eric Ai, Kira Wong, Leticia Maradini, Lila Bullock
 * [P01](Lab_Notebook/P01.md) - QIIME 2 Importing and demultiplexing microgravity dataset
 * [P02](Lab_Notebook/P02.md) - QIIME 2 Denoising and clustering
 * [P03](Lab_Notebook/P03.md) - RStudio Phyloseq Object
+* [Aim 1](Lab_Notebook/Aim_1.md) - Diversity Metrics
+* [Aim 2](Lab_Notebook/Aim_2.md) - Core Microbiome
+* [Aim 3](Lab_Notebook/Aim_3.md) - Indicator Taxa
+* [Aim 4](Lab_Notebook/Aim_4.md) - Differential Abundance (DESeq2)
+* [Aim 5](Lab_Notebook/Aim_5.md) -  Machine Learning (Random Forest)
 
 ## Scripts
 [QIIME 2 Importing and demultiplexing microgravity dataset](Scripts/QIIME2_pt1.txt)
@@ -24,3 +29,7 @@ Anson Mo, Eric Ai, Kira Wong, Leticia Maradini, Lila Bullock
 [QIIME 2 Exporting](Scripts/QIIME2_pt3.txt)
 
 [RStudio Phyloseq object](Scripts/Phyloseq_object.R)
+
+[Aim 4 - DESeq](Scripts/DESeq.R)
+
+
