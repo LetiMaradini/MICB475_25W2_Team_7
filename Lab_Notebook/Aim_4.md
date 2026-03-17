@@ -13,7 +13,7 @@ To identify differentially abundant ASVs between flight (F-LAR/F-ISST) and groun
 
 ## Material: 
 1. R & Rstudio (packages: phyloseq, tidyverse, DESeq2)
-2. [micro_final.RData (phyloseq object unrarefied from P03)](Backup_Files/RStudio/Phyloseq_object/micro_final.RData)
+2. [micro_final.RData (phyloseq object unrarefied from P03)](../Backup_Files/RStudio/Phyloseq_object/micro_final.RData)
 
 ## Method:
 ### Data Loading & Preprocessing
