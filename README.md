@@ -32,4 +32,6 @@ Anson Mo, Eric Ai, Kira Wong, Leticia Maradini, Lila Bullock
 
 [Aim 4 - DESeq](Scripts/DESeq.R)
 
+[Aim 1 - Diversity Analysis](Scripts/Diversity_Analysis.Rhistory)
+
 
