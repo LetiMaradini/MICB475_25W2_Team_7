@@ -22,7 +22,7 @@
    - ⁠BL
   
  ## Pre-meeting agenda:
-- Go over RF (Eric) from Kira's results (does it has figures?)
+- Go over RF (Eric) from Kira's results
 - Maybe discuss some of other results/check what is important to keep/how to approach?
 - Set up deadline for written results, figures and legends and methods for each part
 - Confirm when Evelyn joins
