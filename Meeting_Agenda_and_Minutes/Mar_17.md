@@ -1,4 +1,4 @@
-## Updates since past meeting: ##
+## Updates since past meeting:
 - Found significance in diversity analysis between pre and post euthanasia samples and decided to split it for diversity analysis, core microbiome and DESeq of the comparison groups:
    1. Difference between microgravity and control: F-ISST x GC-ISST
    2. Difference between different time-points within the same cohort (0 x 4.5 x 9 weeks before euthanasia x 9 weeks after euthanasia): GC-LAR and F-LAR
@@ -21,7 +21,14 @@
    - ⁠GC-LAR week 9
    - ⁠BL
   
- ## Pre-meeting agenda: ##
-- Go over RF (Eric) from Kira's results
+ ## Pre-meeting agenda:
+- Go over RF (Eric) from Kira's results (does it has figures?)
 - Maybe discuss some of other results/check what is important to keep/how to approach?
 - Set up deadline for written results, figures and legends and methods for each part
+- Confirm when Evelyn joins
+
+## Notes
+### What has to be done:
+- Some results/figures, script and lab notebook component should already be done as of March 17 for Diveristy analysis (Lila), Core Microbiome (Anson), Indicator taxa (Kira), DESeq (Leticia)
+- Finish written results, methods, figures and legends by March 31st (presentation due on April 5)
+- Run RF (Eric) by when Evelyn joins
