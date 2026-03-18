@@ -31,4 +31,4 @@
 ### What has to be done:
 - Some results/figures, script and lab notebook component (on Github) should already be done as of March 17 for Diveristy analysis (Lila), Core Microbiome (Anson), Indicator taxa (Kira), DESeq (Leticia)
 - Be prepared to present results from our analysis to Evelyn on March 24th
-- Wait on Ritu to confirm threshold for stat in Indicator species with Evelyn -> Run RF (Eric)
+- Wait on Ritu to confirm threshold for stat in Indicator species with Evelyn -> Run RF (Eric) based on ISA-1 (exposed and unexposed groups)
