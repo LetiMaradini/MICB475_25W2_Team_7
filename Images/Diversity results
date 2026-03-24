@@ -1,0 +1,80 @@
+
+TEST: F-ISST x GC-ISST 
+alpha shannon: p = 0.06301 
+alpha faith PD: p = 0.00684 
+beta bray curtis: R^2 = 4.5215 , p = 0.005 
+beta weighted unifrac: R^2 = 1.7445 , p = 0.181 
+betadisper (wunifrac): p = 0.055 
+
+TEST: Longitudinal GC-LAR 
+alpha shannon: p = 0.01484 
+          Comparison          Z     P.unadj      P.adj
+1  W0_Pre - W4.5_Pre  3.0412409 0.002356052 0.01413631
+2   W0_Pre - W9_Post  2.3526581 0.018639765 0.05591930
+3 W4.5_Pre - W9_Post -0.6885829 0.491085816 0.49108582
+4    W0_Pre - W9_Pre  1.3389111 0.180599616 0.27089942
+5  W4.5_Pre - W9_Pre -1.7023298 0.088693557 0.17738711
+6   W9_Post - W9_Pre -1.0137470 0.310703503 0.37284420
+beta bray curtis: R^2 = 5.3706 , p = 0.001 
+beta weighted unifrac: R^2 = 6.2747 , p = 0.001 
+
+TEST: Longitudinal F-LAR 
+alpha shannon: p = 0.0119 
+          Comparison          Z     P.unadj      P.adj
+1  W0_Pre - W4.5_Pre  3.1177501 0.001822372 0.01093423
+2   W0_Pre - W9_Post  1.9318574 0.053377104 0.10675421
+3 W4.5_Pre - W9_Post -1.1858927 0.235664682 0.35349702
+4    W0_Pre - W9_Pre  0.8416013 0.400011183 0.40001118
+5  W4.5_Pre - W9_Pre -2.2761489 0.022837101 0.06851130
+6   W9_Post - W9_Pre -1.0902562 0.275600312 0.33072037
+beta bray curtis: R^2 = 32.4351 , p = 0.001 
+beta weighted unifrac: R^2 = 28.3929 , p = 0.001 
+
+TEST: GC-LAR vs F-LAR at W0_Pre 
+alpha shannon: p = 0.79594 
+alpha faith PD: p = 0.05243 
+beta bray curtis: R^2 = 1.0236 , p = 0.327 
+beta weighted unifrac: R^2 = 0.4627 , p = 0.51 
+betadisper (wunifrac): p = 0.495 
+
+TEST: GC-LAR vs F-LAR at W4.5_Pre 
+alpha shannon: p = 0.97051 
+alpha faith PD: p = 0.12301 
+beta bray curtis: R^2 = 1.7367 , p = 0.114 
+beta weighted unifrac: R^2 = 0.5917 , p = 0.499 
+betadisper (wunifrac): p = 0.669 
+
+TEST: GC-LAR vs F-LAR at W9_Pre 
+alpha shannon: p = 0.48125 
+alpha faith PD: p = 0.9118 
+beta bray curtis: R^2 = 2.1421 , p = 0.129 
+beta weighted unifrac: R^2 = 1.7193 , p = 0.202 
+betadisper (wunifrac): p = 0.014 
+
+TEST: GC-LAR vs F-LAR at W9_Post 
+alpha shannon: p = 0.48125 
+alpha faith PD: p = 0.63053 
+beta bray curtis: R^2 = 4.2953 , p = 0.032 
+beta weighted unifrac: R^2 = 3.9181 , p = 0.05 
+betadisper (wunifrac): p = 0.003 
+
+TEST: Recovery: F-ISST x F-LAR 
+alpha shannon: p = 4e-05 
+alpha faith PD: p = 0.00073 
+beta bray curtis: R^2 = 27.679 , p = 0.001 
+beta weighted unifrac: R^2 = 39.3006 , p = 0.001 
+betadisper (wunifrac): p = 0.001 
+
+TEST: Control: GC-LAR x GC-ISST 
+alpha shannon: p = 0.00032 
+alpha faith PD: p = 0.00288 
+beta bray curtis: R^2 = 6.7489 , p = 0.001 
+beta weighted unifrac: R^2 = 13.6361 , p = 0.001 
+betadisper (wunifrac): p = 0.048 
+
+TEST: GC-LAR (W9) x Basal 
+alpha shannon: p = 0.00245 
+alpha faith PD: p = 0.02505 
+beta bray curtis: R^2 = 15.4371 , p = 0.001 
+RStudioGD 
+        2 
