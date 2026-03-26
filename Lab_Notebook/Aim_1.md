@@ -16,6 +16,7 @@ To investigate alpha & beta diversity metrics both within and between mice gut m
 
 ### Sample Terminology
 
+
 BL: Basal (baseline control)
 
 F-: Flight
@@ -25,6 +26,7 @@ GC-: Ground Control
 -ISST: International Space Station Terminal
 
 -LAR: Live Animal Return 
+
 
 ### Microgravity Exposure Model
 
