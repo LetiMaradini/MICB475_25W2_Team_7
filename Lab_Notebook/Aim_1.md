@@ -14,9 +14,17 @@ Two main analyses were conducted:
 
 ## Comparison groups (CONTINUE EDIT FROM HERE)
 
+### Sample Terminology
+
+BL: Basal (baseline control)
+F-: Flight
+GC-: Ground Control
+-ISST: International Space Station
+-LAR: Live Animal Return 
+
 ### Microgravity Exposure Model
 
-Samples were grouped into three biologically meaningful categories:
+Samples grouped into three biologically meaningful categories:
 
 **Exposed (microgravity or recovery exposure):**
 - F-ISST Week 9  
@@ -37,7 +45,7 @@ Samples were grouped into three biologically meaningful categories:
 
 ### Non-exposed to Microgravity (Condition × Time Model i.e 9 groups)
 
-Samples were grouped into nine treatment × timepoint categories:
+Samples grouped into nine treatment × timepoint categories:
 
 - F-ISST Week 9  
 - GC-ISST Week 9  
@@ -71,7 +79,9 @@ Samples were grouped into nine treatment × timepoint categories:
 ---
 
 ## Method
+
 Uses phyloseq object created in [PO3](../Lab_Notebook/P03.md)
+
 ### Data Import and Phyloseq Construction
 
 - Imported OTU table, taxonomy, metadata, and phylogenetic tree  
@@ -166,14 +176,12 @@ run_test_2group <- function(ps_obj, targets, group_col, title, use_wunifrac = TR
 - diversity plots in `Biological_Visualizations.pdf`
 
 
-
 ---
 ## Code
 
 [Diversity analysis](../Scripts/Diversity_analysis) 
 
  
-
 ---
 
 ## Results
@@ -182,72 +190,56 @@ run_test_2group <- function(ps_obj, targets, group_col, title, use_wunifrac = TR
 
 - compared the mice remaining on ISS against ground control at the end of the study
 - Alpha diversity: significant difference in *richness* (Faith's PD, p = 0.00684) eventhough the difference in *evenness* appeared insignificant (Shannon, p = 0.06301)
-- Beta diversity: significant difference in the types of bacteria present (Bray-Curtis, p = 0.005), but remains insignificant when considering evolutionary relationships (wUniFrac, p = 0.181)
+- Beta diversity: significant difference in the *types of bacteria present* (Bray-Curtis, p = 0.005), but remains insignificant when considering *evolutionary relationships* (wUniFrac, p = 0.181)
 - dispersion: relatively similar levels of variability (betadisper, p = 0.055), further supporting the PERMANOVA result
 
 ### Longitudinal (GC-LAR & F-LAR)
 
 - compared how the microbiome changed over time within the same group of mice
-- GC-LAR: significant shifts in alpha diversity (p = 0.01484) most notably between week 0 and week 4.5 (p-adj = 0.014). beta diversity revealed significant shift in community composition over time (p = 0.001)
-- F-LAR: significant alpha diversity shift (p = 0.0119), most notably between week 0 and week 4.5 also (p-adj = 0.0109). beta diversity revealed a significant shift in commmunity composition also over time (Bray-Curtis R^2 = 32.4%, and wUniFrac R^2 = 28.3%)
+- GC-LAR: significant shifts in alpha diversity (p = 0.01484) most notably between week 0 and week 4.5 (p-adj = 0.014). beta diversity revealed significant shift in *community composition* over time (p = 0.001)
+- F-LAR: significant alpha diversity shift (p = 0.0119), most notably between week 0 and week 4.5 also (p-adj = 0.0109). beta diversity revealed a significant shift in *commmunity composition* also over time (Bray-Curtis R^2 = 32.4%, and wUniFrac R^2 = 28.3%)
 
 ### Pairwise Time-points
 
 - compared differences at identical time intervals between F-LAR (flight) & GC-LAR (ground) cohorts
-- weeks 0 & 4.5: no significant differences, both initially responded siml=ilarly to their respective environments
-- week 9 (pre-euthanasia): no significant differences, but the significant `betadisper` result (p = 0.014) revealed that F-LAR started to show more individual variation
-- week 9 (post-euthanasia): simila alpha diversity, but significant beta diversity (Bray-Curtis p = 0.032, wUniFrac p = 0.05) suggesting that the composition of the F-LAR group significantly diverged from the GC-LAR ground group
+- weeks 0 & 4.5: no significant differences, both initially responded similarly to their respective environments
+- week 9 (pre-euthanasia): no significant differences, but the significant `betadisper` result (p = 0.014) revealed that F-LAR started to show more *individual variation*
+- week 9 (post-euthanasia): simila alpha diversity, but significant beta diversity (Bray-Curtis p = 0.032, wUniFrac p = 0.05) suggesting that the *composition* of the F-LAR group significantly diverged from the GC-LAR ground group
 
 ### Recovery vs Flight
 
 - compared mice euthanized whilst on the ISS (F-ISST) vs those euthanized later after returned to Earth and recovered (F-LAR)
-- diversity metrics: every metric significantly different (Shannon p = 0.00004, Beta p = 0.001). significant R^2 values (27.6% and 39.3%) suggest that return to Earth and subsequent recovery time created diverging microbiome profiles
+- diversity metrics: every metric significantly different (Shannon p = 0.00004, Beta p = 0.001). significant R^2 values (27.6% and 39.3%) suggest that return to Earth and subsequent recovery time created *diverging microbiome profiles*
 
 ### Ground controls
 
 - compared 2 different ground control groups to see if they remained similar independent of microgravity factors
-- diversity metrics: significant differences in alpha (Shannon p = 0.00032) and beta (p = 0.001) suggesting that different housing/handling protocol conditions led to microbiome differences independent of flight/microgravity conditions
+- diversity metrics: significant differences in alpha (Shannon p = 0.00032) and beta (p = 0.001) suggesting that different housing/handling protocol conditions led to *microbiome differences* independent of flight/microgravity conditions
 
 ### Basal vs Control 
 
 - compared the final state of the ground control group (GC-LAR at W9) vs original baseline (Basal)
 - alpha diversity: significant differences in *richness* (Faith's PD, p = 0.025)
 - beta diversity: significant differences in *composition* (Bray-Curtis, p = 0.001)
-- diversity results suggest a natural drift in the microbiome over the 9 week period even without the influence of microgravity
-
----
-
+- diversity results suggest a *natural drift in the microbiome* over the 9 week period even without the influence of microgravity
 
 
 ---
 
 ## Discussion
 
-- Indicator Species Analysis (ISA) differs from differential abundance methods (e.g., DESeq2) in that it:
-  - Focuses on **specificity and consistency of association**
-  - Identifies taxa that are **characteristic of particular environments or conditions**
-
----
-
-
+- 
 
 
 ---
 
 ### Limitations
-- ISA assumes taxa are independent, which may not reflect ecological interactions
-- Rare taxa may be excluded due to filtering and rarefaction
-- Uneven sample sizes across groups (especially in ISA-2) can reduce statistical power
-- Taxonomic resolution limitations (many taxa unresolved beyond higher ranks)
+- 
 
 ---
 
 ### Integration with other analyses
-- ISA complements:
-  - **DESeq2** (magnitude of change)
-  - **Alpha diversity** (within-sample diversity)
-  - **Beta diversity** (community structure differences)
-
+- 
 - Combining these approaches provides a **more complete understanding of microbiome responses**
 
 ---
@@ -255,21 +247,9 @@ run_test_2group <- function(ps_obj, targets, group_col, title, use_wunifrac = TR
 ## Future direction
 
 - **Machine learning applications**
-  - Use ISA-1 taxa as features for classification models (Random Forest)
-  - Predict exposure status based on microbiome composition
+  - Use diversity metrics analysis results for Core Microbiome analysis 
+  - Subsequently use for "exposure status" prediction (based on microbiome composition) in Random Forest model machine-learning construction
 
----
-
-- **Functional analysis**
-  - Map indicator taxa to:
-    - Metabolic pathways
-    - Functional gene categories
-  - Determine ecological roles of key taxa
-
----
-
-- **Cross-method validation**
-  
 
 ---
 
