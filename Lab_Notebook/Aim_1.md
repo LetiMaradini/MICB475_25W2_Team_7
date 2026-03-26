@@ -110,6 +110,8 @@ Uses phyloseq object created in [PO3](../Lab_Notebook/P03.md)
 
 ### Group comparison statistical analysis & plotting
 
+--
+
 #### Build function for comparison between 2 sample groups
 
 ```r
