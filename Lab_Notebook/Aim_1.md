@@ -7,7 +7,7 @@
 To investigate alpha & beta diversity metrics both within and between mice gut microbiome samples. Preliminary analysis was used to see whether statistical significance warrented the need for additional investigation between samples. Diversity metrics were used to see whether sampling conditions, i.e exposure to microgravity and/or spatial isolation, would impact mice gut microbiome communities in terms of abundance, composition, and environment-dependent fluctuations. 
 
 Two main analyses were conducted:
-- **Sample alpha diversity calculations (to check for statistical significance):** looked at general changes in diversity to see whether significance would justify further investigation
+- **Sample alpha diversity calculations (to check for statistical significance):** looked at diversity (richness, evenness) to see whether significant enough to justify further investigation
 - **Alpha & Beta diversity (sampling group comparisons):** compared diversity metrics across different groups and time points in order to extract relevant information
 
 ---
