@@ -104,7 +104,9 @@ Uses phyloseq object created in [PO3](../Lab_Notebook/P03.md)
 
 - Removed low-abundance taxa (total counts ≤ 5)  
 - Removed low-depth samples (< 100 reads)  
-- Rarefied all samples to equal depth (64,411 reads) using:
+- Rarefied all samples to equal depth (64,411 reads)
+
+---
 
 ### Group comparison statistical analysis & plotting
 
