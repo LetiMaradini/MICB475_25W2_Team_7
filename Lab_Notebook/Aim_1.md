@@ -7,7 +7,7 @@
 To investigate alpha & beta diversity metrics both within and between mice gut microbiome samples. Preliminary analysis was used to see whether statistical significance warrented the need for additional investigation between samples. Diversity metrics were used to see whether sampling conditions, i.e exposure to microgravity and/or spatial isolation, would impact mice gut microbiome communities in terms of abundance, composition, and environment-dependent fluctuations. 
 
 Two main analyses were conducted:
-- **Sample diversity (to check for statistical significance):** looked at general changes in diversity to see whether significance would justify further investigation
+- **Sample alpha diversity calculations (to check for statistical significance):** looked at general changes in diversity to see whether significance would justify further investigation
 - **Alpha & Beta diversity (sampling group comparisons):** compared diversity metrics across different groups and time points in order to extract relevant information
 
 ---
@@ -58,9 +58,9 @@ Samples were grouped into nine treatment × timepoint categories:
   - `phyloseq`
   - `tidyverse`
   - `vegan`
-  - `indicspecies`
+  - `picante`
   - `ape`
-  - `stringr`
+  - `FSA`
 
 - **Input Files:**
   - `microgravity_metadata.tsv`
@@ -75,14 +75,12 @@ Uses phyloseq object created in [PO3](../Lab_Notebook/P03.md)
 ### Data Import and Phyloseq Construction
 
 - Imported OTU table, taxonomy, metadata, and phylogenetic tree  
-- Converted OTU table into matrix format and assigned taxa IDs  
-- Parsed taxonomy into hierarchical ranks (Domain → Species)  
-- Created sample metadata including:
-  - `treatment_group` (derived from host ID)
-  - `Week` (0, 4.5, 9)
-
-- Matched taxa between OTU and taxonomy tables  
-- Constructed a unified `phyloseq` object (`micro`)
+- Converted OTU table into matrix format and assigned taxa IDs   
+- Construction of sample metadata including:
+  - `Time` (i.e "Launch plus 0" ~ "W0_Pre)
+  - `Sample_State` ("Pre" or "Post")
+- Format taxonomy via OTU and taxonomy tables  
+- Build Phyloseq & pre-process (rarify) to construct `phyloseq` object
 
 ---
 
@@ -92,129 +90,67 @@ Uses phyloseq object created in [PO3](../Lab_Notebook/P03.md)
 - Removed low-depth samples (< 100 reads)  
 - Rarefied all samples to equal depth (64,411 reads) using:
 
-```r
-rarefy_even_depth()
-- Generated:
-  - micro_final (filtered dataset)
-  - micro_rare (rarefied dataset used for ISA)
+### Group comparison statistical analysis & plotting
 
-# Indicator Species Analysis
-
-## ISA-1: Exposure-Based Grouping
-
-Created grouping variable `isa1_group` with levels:
-- `control`
-- `unexposed`
-- `exposed`
-
-Assigned samples based on treatment group and timepoint, and removed samples not matching defined categories.
-
-Subset phyloseq object:
+#### Build function for comparison between 2 sample groups
 
 ```r
-ps_isa1 <- prune_samples(keep1, ps)
+run_test_2group()
+run_test_2group <- function(ps_obj, targets, group_col, title, use_wunifrac = TRUE)
 ```
 
-Extracted OTU table (samples × taxa format) and ran Indicator Species Analysis:
+#### Microgravity vs Control
 
-```r
-indicator_multipatt_1 <- multipatt(otu_isa1, isa1_group, duleg = TRUE)
-```
+- comparing F-ISST vs GC-ISST sample groups
+- function: ```run_test_2group()```
+- inputs: ps_rare, Sample_state, F-ISST, GC-ISST, Group, F-ISST x GC-ISST
 
-Saved output:
+#### Longitudinal 
 
-```r
-indicator_output_1 <- capture.output(summary(indicator_multipatt_1, indvalcomp = TRUE))
-writeLines(indicator_output_1, "indicator_values_ISA1.txt")
-```
+- comparison within sample group cohort for GC-LAR & F-LAR
+- create dataframe for cohort
+- run Alpha tests (Kruskal & Dunn)
+- run Beta tests (bray curtis & weighted unifrac)
+- plot using: ```ggplot()```
 
----
+#### Pairwise Time-points
 
-## ISA-2: Condition × Time Grouping
+- comparison for time-points in GC-LAR & F-LAR
+- function: ```run_test_2group()```
+- for timepoints tp in W0_Pre, W4.5_Pre, W9_Pre, W9_Post
 
-Created combined grouping variable:
+#### Recovery vs Flight
 
-```r
-CondWeek = paste(treatment_group, Week, sep = "_")
-```
+- comparison for samples F-ISST vs F-LAR
+- function: ```run_test_2group()```
+- input F-ISST & F-LAR for W9_Post tp
 
-Defined a nine-category grouping factor (`isa2_group`) and filtered samples to retain only defined groups.
+#### Ground Controls 
 
-Subset phyloseq object:
+- comparison for ground control in both samples i.e GC-LAR vs GC-ISST
+- function: ```run_test_2group()```
+- input GC-ISST & GC-LAR for W9_Post tp
 
-```r
-ps_isa2 <- prune_samples(keep2, ps)
-```
+#### Basal vs Control
 
-Extracted OTU table (samples × taxa) and ran Indicator Species Analysis:
+- comparison for basal (combined BL + W0) vs control (W9)
+- function: ```run_test_2group()```
+- input GC-LAR W9_Post vs Basal (BL + W0_Pre)
 
-```r
-indicator_multipatt_2 <- multipatt(otu_isa2, isa2_group, duleg = TRUE)
-```
+### Saved outputs
 
-Saved output:
+2 files generated
+- analysis metric values in `Satistical_Analysis_Results.txt`
+- diversity plots in `Biological_Visualizations.pdf`
 
-```r
-indicator_output_2 <- capture.output(summary(indicator_multipatt_2, indvalcomp = TRUE))
-writeLines(indicator_output_2, "indicator_values_ISA2.txt")
-```
 
----
-
-## Visualization and Post-processing
-
-- Extracted significant taxa (`p < 0.05`)
-- Annotated taxa using taxonomy (Genus, Family, Phylum)
-- Generated:
-  - Heatmaps of top indicator taxa
-  - Barplots of top taxa (IndVal ranking)
-  - Alpha diversity plots (Shannon, Simpson)
-  - Beta diversity (PCoA, Bray-Curtis)
 
 ---
 ## Code
 
-[Indicator_species code](../Scripts/Indicator_taxa_final.R)
+[Diversity analysis](../Scripts/Diversity analysis)
 
-## Output files
-
-### Indicator analysis outputs
-- `indicator_values_ISA1.txt`  
-  - Significant indicator taxa for **microgravity exposure model (ISA-1)**  
-  - Includes IndVal scores, associated group, and p-values  
-
-- `indicator_values_ISA2.txt`  
-  - Significant indicator taxa for **condition × time model (ISA-2)**  
-  - Higher-resolution associations across all 9 experimental groups  
-
----
-
-### Visualization outputs
-- `ISA1_heatmap.png`  
-  - Heatmap of top indicator taxa for ISA-1 (exposure groups)
-
-- `ISA2_heatmap.png`  
-  - Heatmap of top indicator taxa for ISA-2 (9 condition × time groups)
-
-- `ISA1_top15.png`  
-  - Barplot of top 15 indicator taxa ranked by IndVal (ISA-1)
-
-- `diversity_exposure.png`  
-  - Alpha diversity (Shannon, Simpson) across exposure groups
-
-- `pcoa_exposure.png`  
-  - Beta diversity (Bray-Curtis PCoA) colored by exposure group  
-
----
-
-### Tabular outputs
-- `ISA1_significant_157taxa.csv`  
-  - Table of significant taxa (p < 0.05) from ISA-1  
-  - Includes taxonomy (Genus/Family/Phylum) and IndVal scores  
-
-- `ISA2_significant_177taxa.csv`  
-  - Table of significant taxa (p < 0.05) from ISA-2  
-  - Provides higher-resolution taxon-group associations  
+ 
 
 ---
 
@@ -230,21 +166,7 @@ See [Indicator Species
 
 ---
 
-### ISA-2 (Condition × Time Model)
-- Indicator taxa were identified for all **9 treatment × timepoint combinations**
 
-- This model captured:
-  - **Temporal dynamics** of microbiome shifts
-  - Differences between:
-    - Flight vs ground control
-    - Early vs late exposure
-    - Recovery vs active exposure
-
-- ISA-2 revealed **more nuanced and condition-specific microbial associations** compared to ISA-1
-
-- However:
-  - Increased group resolution results in **lower statistical power per group**
-  - More variability due to smaller sample sizes per category
 
 ---
 
@@ -256,22 +178,8 @@ See [Indicator Species
 
 ---
 
-### ISA-1
-- Produces **strong candidate biomarkers**
-- Well-suited for:
-  - Machine learning classification
-  - Predictive modeling of microgravity exposure
 
----
 
-### ISA-2
-- Captures:
-  - Time-dependent microbial shifts
-  - Subtle differences between experimental cohorts
-- Enables ecological interpretation of:
-  - Exposure duration
-  - Recovery effects
-  - Environmental vs microgravity influences
 
 ---
 
@@ -310,10 +218,7 @@ See [Indicator Species
 ---
 
 - **Cross-method validation**
-  - Compare ISA results with DESeq2 outputs
-  - Identify taxa that are both:
-    - Differentially abundant
-    - Strong ecological indicators
+  
 
 ---
 
