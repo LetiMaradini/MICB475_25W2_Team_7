@@ -104,38 +104,60 @@ run_test_2group <- function(ps_obj, targets, group_col, title, use_wunifrac = TR
 - comparing F-ISST vs GC-ISST sample groups
 - function: ```run_test_2group()```
 - inputs: ps_rare, Sample_state, F-ISST, GC-ISST, Group, F-ISST x GC-ISST
+- Alpha test: Wilcoxon rank-sum
+- Alpha metrics: Shannon, Faith's PD
+- Beta test: PERMANOVA & betadisper
+- Beta distances: Bray-Curtis, wUniFrac
 
 #### Longitudinal 
 
-- comparison within sample group cohort for GC-LAR & F-LAR
+- comparison between different time-points within same cohort for GC-LAR & F-LAR
 - create dataframe for cohort
-- run Alpha tests (Kruskal & Dunn)
-- run Beta tests (bray curtis & weighted unifrac)
+- Alpha tests: Kruskal & Dunn
+- Alpha metrics: Shannon, Faith's PD
+- Beta tests: PERMANOVA
+- Beta distances: Bray-Curtis & wUniFrac
 - plot using: ```ggplot()```
 
 #### Pairwise Time-points
 
-- comparison for time-points in GC-LAR & F-LAR
+- comparison between the same time-points in GC-LAR & F-LAR
 - function: ```run_test_2group()```
 - for timepoints tp in W0_Pre, W4.5_Pre, W9_Pre, W9_Post
+- Alpha test: 3 Wilcoxon rank-sum
+- Alpha metrics: Shannon, Faith's PD
+- Beta test: 3 pairwise PERMANOVA
+- Beta distances: Bray-Curtis, wUniFrac
 
 #### Recovery vs Flight
 
-- comparison for samples F-ISST vs F-LAR
+- comparison for samples F-ISST vs F-LAR both at 9 weeks after euthanasia
 - function: ```run_test_2group()```
 - input F-ISST & F-LAR for W9_Post tp
+- Alpha test: Wilcoxon rank-sum
+- Alpha metrics: Shannon, Faith's PD
+- Beta test: PERMANOVA + betadisper
+- Beta distances: Bray-Curtis, wUniFrac
 
 #### Ground Controls 
 
-- comparison for ground control in both samples i.e GC-LAR vs GC-ISST
+- comparison for ground controls GC-LAR vs GC-ISST at 9 weeks after euthanasia
 - function: ```run_test_2group()```
 - input GC-ISST & GC-LAR for W9_Post tp
+- Alpha test: Wilcoxon rank-sum
+- Alpha metrics: Shannon, Faith's PD
+- Beta test: PERMANOVA + betadisper
+- Beta distances: Bray-Curtis, wUniFrac
 
 #### Basal vs Control
 
 - comparison for basal (combined BL + W0) vs control (W9)
 - function: ```run_test_2group()```
 - input GC-LAR W9_Post vs Basal (BL + W0_Pre)
+- Alpha test: Wilcoxon rank-sum
+- Alpha metrics: Shannon, Faith's PD
+- Beta test: PERMANOVA + betadisper
+- Beta distances: Bray-Curtis
 
 ### Saved outputs
 
@@ -148,21 +170,50 @@ run_test_2group <- function(ps_obj, targets, group_col, title, use_wunifrac = TR
 ---
 ## Code
 
-[Diversity analysis](../Scripts/Diversity analysis) 
+[Diversity analysis](../Scripts/Diversity_analysis) 
 
  
 
 ---
 
 ## Results
-See [Indicator Species
-### ISA-1 (Microgravity Exposure Model)
-- Indicator taxa analysis identified microbial taxa significantly associated with:
-  - **Exposed** (microgravity or recovery)
-  - **Unexposed** (terrestrial/no exposure)
-  - **Control** (baseline)
 
-- Taxa identified in this model represent **strong ecological indicators of microgravity exposure status**
+### Microgravity (F-ISST) vs Control (GC-ISST)
+
+- compared the mice remaining on ISS against ground control at the end of the study
+- Alpha diversity: significant difference in *richness* (Faith's PD, p = 0.00684) eventhough the difference in *evenness* appeared insignificant (Shannon, p = 0.06301)
+- Beta diversity: significant difference in the types of bacteria present (Bray-Curtis, p = 0.005), but remains insignificant when considering evolutionary relationships (wUniFrac, p = 0.181)
+- dispersion: relatively similar levels of variability (betadisper, p = 0.055), further supporting the PERMANOVA result
+
+### Longitudinal (GC-LAR & F-LAR)
+
+- compared how the microbiome changed over time within the same group of mice
+- GC-LAR: significant shifts in alpha diversity (p = 0.01484) most notably between week 0 and week 4.5 (p-adj = 0.014). beta diversity revealed significant shift in community composition over time (p = 0.001)
+- F-LAR: significant alpha diversity shift (p = 0.0119), most notably between week 0 and week 4.5 also (p-adj = 0.0109). beta diversity revealed a significant shift in commmunity composition also over time (Bray-Curtis R^2 = 32.4%, and wUniFrac R^2 = 28.3%)
+
+### Pairwise Time-points
+
+- compared differences at identical time intervals between F-LAR (flight) & GC-LAR (ground) cohorts
+- weeks 0 & 4.5: no significant differences, both initially responded siml=ilarly to their respective environments
+- week 9 (pre-euthanasia): no significant differences, but the significant `betadisper` result (p = 0.014) revealed that F-LAR started to show more individual variation
+- week 9 (post-euthanasia): simila alpha diversity, but significant beta diversity (Bray-Curtis p = 0.032, wUniFrac p = 0.05) suggesting that the composition of the F-LAR group significantly diverged from the GC-LAR ground group
+
+### Recovery vs Flight
+
+- compared mice euthanized whilst on the ISS (F-ISST) vs those euthanized later after returned to Earth and recovered (F-LAR)
+- diversity metrics: every metric significantly different (Shannon p = 0.00004, Beta p = 0.001). significant R^2 values (27.6% and 39.3%) suggest that return to Earth and subsequent recovery time created diverging microbiome profiles
+
+### Ground controls
+
+- compared 2 different ground control groups to see if they remained similar independent of microgravity factors
+- diversity metrics: significant differences in alpha (Shannon p = 0.00032) and beta (p = 0.001) suggesting that different housing/handling protocol conditions led to microbiome differences independent of flight/microgravity conditions
+
+### Basal vs Control 
+
+- compared the final state of the ground control group (GC-LAR at W9) vs original baseline (Basal)
+- alpha diversity: significant differences in *richness* (Faith's PD, p = 0.025)
+- beta diversity: significant differences in *composition* (Bray-Curtis, p = 0.001)
+- diversity results suggest a natural drift in the microbiome over the 9 week period even without the influence of microgravity
 
 ---
 
