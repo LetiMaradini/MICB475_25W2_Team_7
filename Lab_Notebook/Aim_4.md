@@ -17,24 +17,24 @@ To identify differentially abundant ASVs between flight (F-LAR/F-ISST) and groun
 
 ## Method:
 ### Data Loading & Preprocessing
-1. Loaded phyloseq object "micro_final" from "micro_final.RData".
-2. Factored treatment_group into levels: BL, F-LAR, GC-LAR, F-ISST, GC-ISST.
-3. Factored Time into levels: Launch plus 0, Launch plus 4.5, Launch plus 9.
+1. Loaded phyloseq object micro_final from micro_final.RData.
+2. Factored treatment_group into levels BL, F-LAR, GC-LAR, F-ISST, and GC-ISST.
+3. Factored Time into levels Launch plus 0, Launch plus 4.5, and Launch plus 9.
 4. Created sample_type_group by appending -Fresh/-Necropsy to F-LAR/GC-LAR samples at Launch plus 9; factored with appropriate levels.
-5. Applied +1 pseudocount transformation to all sample counts, generating micro_plus1 phyloseq object.
+5. Applied a +1 pseudocount transformation to all sample counts, generating the micro_plus1 phyloseq object.
 ### DESeq2 Differential Abundance Analysis
-1. Defined run_deseq_treatment helper: subset by sample_type_group, convert to DESeqDataSet (~sample_type_group design), run DESeq(), extract tidy contrast results.
-2. Microgravity (Launch plus 9): Subset F-ISST vs GC-ISST; DESeq2 contrast via helper.
-3. F-LAR longitudinal: Subset F-LAR samples; factored host_id; created time_group (Week0, Week4.5, Week9_Fresh, Week9_Necropsy); DESeq2 (~host_id + time_group); extracted 6 contrasts (4.5vs0, 9freshvs0, 9necrovs0, 9freshvs4.5, 9necrovs4.5, 9freshvs9necro).
-4. GC-LAR longitudinal: Identical workflow to F-LAR; extracted same 6 contrasts.
-5. LAR cross-cohort timepoints: Mapped 4 comparisons (0w/4.5w F-LAR vs GC-LAR; 9w Fresh/Necropsy); filtered samples (skip <4 samples); DESeq2 via helper; combined results as res_LAR_pairs.
-6. Return vs flight (Week 9): Subset F-ISST vs F-LAR-Necropsy; DESeq2 contrast.
-7. Controls Week 9: Subset GC-LAR-Necropsy vs GC-ISST; DESeq2 contrast.
-8. Basal control (Week 0): Subset GC-LAR vs BL; DESeq2 contrast.
+1. Defined the run_deseq_treatment helper to subset by sample_type_group, convert to a DESeq2 dataset with a ~ sample_type_group design, run DESeq(), and extract tidy contrast results.
+2. For microgravity at Launch plus 9, analyzed F-ISST versus GC-ISST using the helper.
+3. For F-LAR longitudinal analysis, subset F-LAR samples, factored host_id, created time_group (Week0, Week4.5, Week9_Fresh, Week9_Necropsy), fit DESeq2 with ~ host_id + time_group, and extracted six contrasts (4.5vs0, 9freshvs0, 9necrovs0, 9freshvs4.5, 9necrovs4.5, 9freshvs9necro).
+4. The same workflow was used for GC-LAR longitudinal analysis.
+5. For cross-cohort LAR comparisons, mapped four contrasts (Launch plus 0 and Launch plus 4.5 for F-LAR vs GC-LAR, plus Launch plus 9 Fresh and Necropsy), filtered samples with a minimum of four samples, ran DESeq2 via the helper, and combined the results as res_LAR_pairs.
+6. Additional contrasts included F-ISST versus F-LAR-Necropsy at week 9, GC-LAR-Necropsy versus GC-ISST at week 9, and GC-LAR versus BL at week 0.
+
 ### Visualization & Output Generation
-1. Defined volcano_plot helper: flag significant ASVs (padj < 0.05, |log2FC| > 2); plot log2FC vs -log10(padj); save PNGs for all 20 comparisons.
-2. Significance summary: Compiled 20 result objects (slicing res_LAR_pairs for 0w/4.5w); rowwise computed tested/up/down/non-sig ASVs (padj < 0.05, |log2FC| > 2); saved "ASVs_count_summary.csv".
-3. Significant ASV barplots/tables: Filtered 20 comparisons for >0 strict significant ASVs; per comparison: extracted sig ASVs, joined with tax_table from micro_final, sorted by log2FC, unique-ified Genus names; generated log2FC barplots by Genus with lfcSE error bars (90° x-axis rotation); saved PNGs and per-comparison CSV tables.
+1. Defined volcano_plot to flag significant ASVs using padj < 0.05 and abs(log2FoldChange) > 2, plot log2 fold change versus -log10(padj), and save PNGs for all 20 comparisons.
+2. Compiled a 20-row significance summary from the result objects, including the two LAR time-point subsets, and calculated tested, upregulated, downregulated, and non-significant ASVs using the same strict cutoff; saved the table as ASVs_count_summary.csv.
+3. Generated significant ASV barplots and tables for all 20 comparisons by extracting strict-significant ASVs, joining taxonomy from micro_final, sorting by log2 fold change, making genus names unique, and plotting genus-level log2 fold change with lfcSE error bars and rotated x-axis labels.
+4. Saved the barplots as PNGs and the per-comparison tables as CSV files.
 
 ## Code: 
 [DESeq code](../Scripts/DESeq.R)
