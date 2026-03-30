@@ -8,4 +8,4 @@
   - Future directions (coherent and well thought-out future directions (ideally a mix of short and long-term ideas)
 ## Questions:
 - Does the title of the presentation has to be different from what we already had in the proposal?
-- The results are more focused on the RStudio part? Is it needed to talk about the QIIME part? 
+- The results are more focused on the RStudio part (aims)? Is it needed to talk about the QIIME part? 
