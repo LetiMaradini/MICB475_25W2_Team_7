@@ -236,17 +236,6 @@ run_test_2group <- function(ps_obj, targets, group_col, title, use_wunifrac = TR
 
 ---
 
-## Discussion
-
-- 
-
-
----
-
-### Limitations
-- 
-
----
 
 ### Integration with other analyses
 - 
@@ -261,6 +250,3 @@ run_test_2group <- function(ps_obj, targets, group_col, title, use_wunifrac = TR
   - Subsequently use for "exposure status" prediction (based on microbiome composition) in Random Forest model machine-learning construction
 
 
----
-
-- **Ecological interpretation**
