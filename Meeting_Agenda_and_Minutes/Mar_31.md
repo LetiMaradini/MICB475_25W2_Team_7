@@ -13,6 +13,27 @@
 ## Meeting Notes:
 - underline in methods that RF built on taxa data only (not metadata)
 - for slides highlight % for RF figure (so that easier to interpret by presentation group)
-- table 1 methods accronyms (i.e GC, F, ISST, LAR, etc). Fig 1 alpha diversity (3 panels), Fig 2 beta diversity (3 panels), Fig 3 core microbiome (5 panels), table 2 (indicator taxa), Fig 4 DeSeq (5 panels), Fig 5 Random Forest (2 panels ROC curve & genie)
-- Fig 1. panel A ISST only, panel B LAR (Flight), panel C LAR (GC). Fig 2. (same layout w/ wUniFrac). panel A ISST, panel B F-LAR (merge all timepoints), panel C GC_LAR (merge all timepoints)
-- Fig 1 add all significance *. labels 45 deg (panels B/C, may not need for A). no color. normalize grid/theme. 
+- summary of all figures/tables:
+    - table 1 methods accronyms (i.e GC, F, ISST, LAR, etc).
+    - Fig 1 alpha diversity (3 panels)
+    - Fig 2 beta diversity (3 panels)
+    - Fig 3 core microbiome (5 panels)
+    - table 2 (indicator taxa)
+    - Fig 4 DeSeq (5 panels)
+    - Fig 5 Random Forest (2 panels ROC curve & genie)
+- Figure 1: alpha diversity
+    - panel A GC- vs F- ISST
+    - panel B GC-LAR (4 timepoints)
+    - panel C F-LAR (4 timepoints)
+- Figure 2: beta diversity (same panel layout w/ wUniFrac)
+    - panel A GC- vs F- ISST
+    - panel B GC-LAR (4 timepoints)
+    - panel C F_LAR (4 timepoints)
+- edits for Figure 1 to do:
+    - add all significance * for panels B/C
+    - labels 45 deg (panels B/C, may not need for A)
+    - panels B/C no color.
+    - normalize grid/theme between all panels
+    - remove "group" label on x-axis, remove legend/titles
+    - add x axis label titles (45 deg for B/C or normal for A)
+    - in legend have title of figure, panels, and significance (p-values)
