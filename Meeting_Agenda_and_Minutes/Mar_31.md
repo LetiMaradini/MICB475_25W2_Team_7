@@ -9,3 +9,8 @@
 ## Questions:
 - Does the title of the presentation has to be different from what we already had in the proposal?
 - The results are more focused on the RStudio part (aims)? Is it needed to talk about the QIIME part? 
+
+## Meeting Notes:
+- underline in methods that RF built on taxa data only (not metadata)
+- for slides highlight % for RF figure (so that easier to interpret by presentation group)
+- Fig 1 alpha diversity (3 panels), Fig 2 beta diversity (3 panels), Fig 3 core microbiome (5 panels), table 1 (indicator taxa), Fig 4 DeSeq (5 panels), Fig 5 Random Forest (2 panels ROC curve & genie)
