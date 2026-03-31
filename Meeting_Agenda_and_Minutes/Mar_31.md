@@ -14,3 +14,5 @@
 - underline in methods that RF built on taxa data only (not metadata)
 - for slides highlight % for RF figure (so that easier to interpret by presentation group)
 - Fig 1 alpha diversity (3 panels), Fig 2 beta diversity (3 panels), Fig 3 core microbiome (5 panels), table 1 (indicator taxa), Fig 4 DeSeq (5 panels), Fig 5 Random Forest (2 panels ROC curve & genie)
+- Fig 1. panel A ISST only, panel B LAR (Flight), panel C LAR (GC). Fig 2. (same layout w/ wUniFrac). panel A ISST, panel B F-LAR (merge all timepoints), panel C GC_LAR (merge all timepoints)
+- Fig 1 add all significance *. labels 45 deg (panels B/C, may not need for A). no color. normalize grid/theme. 
