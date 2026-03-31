@@ -32,7 +32,7 @@ Anson Mo, Eric Ai, Kira Wong, Leticia Maradini, Lila Bullock
 
 [Aim 1 - Diversity Analysis](Scripts/Diversity_Analysis.Rhistory)
 
-[Aim 3 - Indicator Species](Scripts/Indicator_taxa_final.R) 
+[Aim 3 - Indicator Species](Scripts/Indicator_taxa_final_0.07.R)
 
 [Aim 4 - DESeq](Scripts/DESeq.R)
 
