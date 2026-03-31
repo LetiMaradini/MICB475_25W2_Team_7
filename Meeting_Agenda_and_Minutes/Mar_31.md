@@ -41,4 +41,5 @@
     - remove all BLs
     - change stat value for stat value 0.7 or higher
     - in methods make sure to explain how bin groups into exposed vs unexposed
+- presentation title: show be takeaway of project (not as "wordy" as paper title) i.e paper shows microgravity affects microbiome and model can be built
 
