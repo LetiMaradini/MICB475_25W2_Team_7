@@ -37,3 +37,7 @@
     - remove "group" label on x-axis, remove legend/titles
     - add x axis label titles (45 deg for B/C or normal for A)
     - in legend have title of figure, panels, and significance (p-values)
+- Table 2:
+    - remove all BLs
+    - change stat value for stat value 0.7 or higher
+    - in methods make sure to explain how bin groups into exposed vs unexposed
