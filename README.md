@@ -30,8 +30,10 @@ Anson Mo, Eric Ai, Kira Wong, Leticia Maradini, Lila Bullock
 
 [RStudio Phyloseq object](Scripts/Phyloseq_object.R)
 
-[Aim 4 - DESeq](Scripts/DESeq.R)
-
 [Aim 1 - Diversity Analysis](Scripts/Diversity_Analysis.Rhistory)
+
+[Aim 3 - Indicator Species](Scripts/Indicator_taxa_final.R) 
+
+[Aim 4 - DESeq](Scripts/DESeq.R)
 
 
