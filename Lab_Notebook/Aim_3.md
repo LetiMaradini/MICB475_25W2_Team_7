@@ -171,13 +171,13 @@ writeLines(indicator_output_1, "indicator_values_ISA1.txt")
 
 ## Future direction
 
-- **Machine learning applications**
+**Machine learning applications** (short term)
   - Use ISA taxa as features for classification models (Random Forest)
   - Predict exposure status based on microbiome composition
 
----
+--- 
 
-- **Functional analysis**
+ **Functional analysis** (short term)
   - Map indicator taxa to:
     - Metabolic pathways
     - Functional gene categories
@@ -185,7 +185,7 @@ writeLines(indicator_output_1, "indicator_values_ISA1.txt")
 
 ---
 
-- **Cross-method validation**
+- **Cross-method validation** (short term)
   - Compare ISA results with DESeq2 outputs
   - Identify taxa that are both:
     - Differentially abundant
@@ -193,7 +193,7 @@ writeLines(indicator_output_1, "indicator_values_ISA1.txt")
 
 ---
 
-- **Ecological interpretation**
+- **Ecological interpretation** (long term)
   - Investigate how microgravity influences:
     - Microbial community assembly
     - Stability and resilience of the microbiome
