@@ -134,6 +134,7 @@ writeLines(indicator_output_1, "indicator_values_ISA1.txt")
   - **Unexposed** (terrestrial/no exposure)
 - Taxa identified in this model represent **strong ecological indicators of microgravity exposure status**
 - Top 3 stat values associated with **microgravity conditions**: Lachnoclostridium, Colidextribacter, Turicibacter (genus)
+- One singular value associated with **no microgravity exposure**: Escherichia Shigella
 
 ---
 
