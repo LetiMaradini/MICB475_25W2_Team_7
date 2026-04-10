@@ -6,7 +6,7 @@
 ## Purpose
 To identify microbial taxa significantly associated with microgravity exposure and experimental conditions in a murine gut microbiome dataset using Indicator Species Analysis. This approach detects taxa that are both **specific** and **frequent** within defined groups, making it well-suited for ecological interpretation and biomarker discovery.
 
-ISA (Exposure model):** simplifies samples into exposure categories to identify robust indicator taxa and support machine learning applications  
+ISA Exposure Model: simplifies samples into exposure categories to identify robust indicator taxa and support machine learning applications  
 
 ---
 
