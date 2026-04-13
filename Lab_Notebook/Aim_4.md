@@ -12,7 +12,7 @@ To identify differentially abundant ASVs between flight (F-LAR/F-ISST) and groun
    5. Compare control and basal (week 0 not dividing these between pre/post euthanasia because both of them have these samples so it would already be consistent): GC-LAR x Basal
 
 ## Material: 
-1. R & Rstudio (packages: phyloseq, tidyverse, DESeq2)
+1. R & Rstudio (packages: phyloseq, tidyverse, DESeq2, dplyr, purrr, tibble, ggplot2, readr, patchwork)
 2. [micro_final.RData (phyloseq object unrarefied from P03)](../Backup_Files/RStudio/Phyloseq_object/micro_final.RData)
 
 ## Method:
