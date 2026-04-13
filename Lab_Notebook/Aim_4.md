@@ -49,8 +49,8 @@ To identify differentially abundant ASVs between flight (F-LAR/F-ISST) and groun
 1. [Volcano plots for comparison groups](../Images/RStudio/Aim_4/Volcano_plots) 
 2. [ASVs_count_summary.csv (table of 20 comparisons with columns tested, up, down, and ns ASVs)](../Images/RStudio/Aim_4/ASVs_count_summary.csv)
 3. [Significant ASVs in barplots per comparison group](../Images/RStudio/Aim_4/Bar_plots_sig_ASVs+Lists)
-4. [Tables of significant ASVs per comparison group (../Images/RStudio/Aim_4/Bar_plots_sig_ASVs+Lists)
-5. [Publiucation ready plots] (../Images/RStudio/Aim_4/Pub_ready_plots)
+4. [Tables of significant ASVs per comparison group](../Images/RStudio/Aim_4/Bar_plots_sig_ASVs+Lists)
+5. [Publiucation ready plots](../Images/RStudio/Aim_4/Pub_ready_plots)
 
 ## Results: 
 Check output files
