@@ -35,6 +35,12 @@ To identify differentially abundant ASVs between flight (F-LAR/F-ISST) and groun
 2. Compiled a 20-row significance summary from the result objects, including the two LAR time-point subsets, and calculated tested, upregulated, downregulated, and non-significant ASVs using the same strict cutoff; saved the table as ASVs_count_summary.csv.
 3. Generated significant ASV barplots and tables for all 20 comparisons by extracting strict-significant ASVs, joining taxonomy from micro_final, sorting by log2 fold change, making genus names unique, and plotting genus-level log2 fold change with lfcSE error bars and rotated x-axis labels.
 4. Saved the barplots as PNGs and the per-comparison tables as CSV files.
+5. Created a publication ready figure using:
+   - vol_plot_F-ISST_vs_GC-ISST_9.png
+   - vol_plot_F-LAR_vs_GC-LAR_0.png
+   - vol_plot_F-LAR_vs_GC-LAR_4.5.png
+   - vol_plot_F-LAR-Fresh_vs_GC-LAR-Fresh.png
+   - vol_plot_F-LAR-Necropsy_vs_GC-LAR-Necropsy.png
 
 ## Code: 
 [DESeq code](../Scripts/DESeq.R)
