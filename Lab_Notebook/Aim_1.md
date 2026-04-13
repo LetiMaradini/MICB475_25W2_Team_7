@@ -189,7 +189,7 @@ run_test_2group <- function(ps_obj, targets, group_col, title, use_wunifrac = TR
 ---
 ## Code
 
-[Diversity analysis](../Scripts/Diversity_analysis) 
+[Diversity analysis](../Scripts/Diversity_analysis.R) 
 
  
 ---
