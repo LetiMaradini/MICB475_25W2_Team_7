@@ -117,7 +117,7 @@ writeLines(indicator_output_1, "indicator_values_ISA1.txt")
 ---
 ## Code
 
-[Indicator_species code](Scripts/Indicator_taxa_final_0.05.R)
+[Indicator_species code](../Scripts/Indicator_taxa_final_0.05.R)
 
 ## Output files
 
