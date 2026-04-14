@@ -117,7 +117,7 @@ writeLines(indicator_output_1, "indicator_values_ISA1.txt")
 ---
 ## Code
 
-[Indicator_species code](../Scripts/Indicator_taxa_final.R)
+[Indicator_species code](Scripts/Indicator_taxa_final_0.05.R)
 
 ## Output files
 
@@ -156,16 +156,6 @@ writeLines(indicator_output_1, "indicator_values_ISA1.txt")
 - Rare taxa may be excluded due to filtering and rarefaction
 - Uneven sample sizes across groups (especially in ISA-2) can reduce statistical power
 - Taxonomic resolution limitations (many taxa unresolved beyond higher ranks)
-
----
-
-### Integration with other analyses
-- ISA complements:
-  - **DESeq2** (magnitude of change)
-  - **Alpha diversity** (within-sample diversity)
-  - **Beta diversity** (community structure differences)
-
-- Combining these approaches provides a **more complete understanding of microbiome responses**
 
 ---
 
