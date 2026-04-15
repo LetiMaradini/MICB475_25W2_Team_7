@@ -151,94 +151,94 @@ FLAR_week9_necropsy_ASVs <- core_members(FLAR_week9_necropsy, detection = 0.001,
 # basal vs gclar no split
 venn_plot_basal_GCLAR_no_split <- ggVennDiagram(x = list(Basal = basal_ASVs,
                                                          GCLAR = GCLAR_ASVs)) +
-  scale_fill_gradient(low = "#FF69B4", high = "#FFE4E1") + # Plot aesthetics
+  scale_fill_gradient(low = "white", high = "blue", limits = c(0, 100)) + # Plot aesthetics
   scale_x_continuous(expand = expansion(mult = .1))
 
 # Save the Venn diagram as a png
-ggsave(filename = "core_microbiome_basal_GCLAR_no_split.png", plot = venn_plot_basal_GCLAR_no_split, width = 7, height = 7)
+ggsave(filename = "core_microbiome_basal_GCLAR_no_split.png", plot = venn_plot_basal_GCLAR_no_split, + scale_x_discrete(expand = c(0, 1), width = 10, height = 10)
 
 # GCLAR week 9 vs GCISST
 venn_plot_GCLARweek9_GCISST_no_split <- ggVennDiagram(x = list(GCLAR = GCLAR_week9_ASVs,
-                                                         GCISST = GCISST_ASVs)) +
-  scale_fill_gradient(low = "#FF69B4", high = "#FFE4E1") + # Plot aesthetics
+                                                         GCISST = GCISST_ASVs), label_size = 100) +
+  scale_fill_gradient(low = "white", high = "blue", limits = c(0, 100)) + # Plot aesthetics
   scale_x_continuous(expand = expansion(mult = .1))
 
 # Save the Venn diagram as a png
-ggsave(filename = "core_microbiome_GCISST_GCLAR_no_split.png", plot = venn_plot_GCLARweek9_GCISST_no_split, width = 7, height = 7)
+ggsave(filename = "core_microbiome_GCISST_GCLAR_no_split.png", plot = venn_plot_GCLARweek9_GCISST_no_split, width = 11, height = 11)
 
 #F-ISST x F-LAR 9 WEEKS NECROPSY
 venn_plot_FISST_FLAR_no_split_week9 <- ggVennDiagram(x = list(FISST = FISST_ASVs,
-                                                        FLAR_Week_9 = FLAR_week9_ASVs)) +
-  scale_fill_gradient(low = "#FF69B4", high = "#FFE4E1") + # Plot aesthetics
+                                                        FLAR = FLAR_week9_ASVs), label_size = 100) +
+  scale_fill_gradient(low = "white", high = "blue", limits = c(0, 100)) + # Plot aesthetics
   scale_x_continuous(expand = expansion(mult = .1))
 
 # Save the Venn diagram as a png
-ggsave(filename = "core_microbiome_FISST_FLAR_no_split_week9.png", plot = venn_plot_FISST_FLAR_no_split_week9, width = 7, height = 7)
+ggsave(filename = "core_microbiome_FISST_FLAR_no_split_week9.png", plot = venn_plot_FISST_FLAR_no_split_week9, width = 11, height = 11)
 
 #GCLAR FLAR WEEK 0 X 0
 venn_plot_GCLAR_FLAR_week0 <- ggVennDiagram(x = list(GCLAR_Week_0 = GCLAR_week0_ASVs,
-                                                              FLAR_Week_0 = FLAR_week0_ASVs)) +
-  scale_fill_gradient(low = "#FF69B4", high = "#FFE4E1") + # Plot aesthetics
+                                                              FLAR_Week_0 = FLAR_week0_ASVs), label_size = 100) +
+  scale_fill_gradient(low = "white", high = "blue", limits = c(0, 100)) + # Plot aesthetics
   scale_x_continuous(expand = expansion(mult = .1))
 
 # Save the Venn diagram as a png
-ggsave(filename = "core_microbiome_GCLAR_FLAR_week0.png", plot = venn_plot_GCLAR_FLAR_week0, width = 7, height = 7)
+ggsave(filename = "core_microbiome_GCLAR_FLAR_week0.png", plot = venn_plot_GCLAR_FLAR_week0, width = 11, height = 11)
 
 #GCLAR FLAR WEEK 4.5
 venn_plot_GCLAR_FLAR_week4_5 <- ggVennDiagram(x = list(GCLAR_Week_4_5 = GCLAR_week4_5_ASVs,
-                                                     FLAR_Week_4_5 = FLAR_week4_5_ASVs)) +
-  scale_fill_gradient(low = "#FF69B4", high = "#FFE4E1") + # Plot aesthetics
+                                                     FLAR_Week_4_5 = FLAR_week4_5_ASVs), label_size = 100) +
+  scale_fill_gradient(low = "white", high = "blue", limits = c(0, 100)) + # Plot aesthetics
   scale_x_continuous(expand = expansion(mult = .1))
 
 # Save the Venn diagram as a png
-ggsave(filename = "core_microbiome_GCLAR_FLAR_week4_5.png", plot = venn_plot_GCLAR_FLAR_week4_5 , width = 7, height = 7)
+ggsave(filename = "core_microbiome_GCLAR_FLAR_week4_5.png", plot = venn_plot_GCLAR_FLAR_week4_5 , width = 11, height = 11)
 
 #GCLAR FLAR WEEK 9 FRESH
-venn_plot_GCLAR_FLAR_week9_fresh <- ggVennDiagram(x = list(GCLAR_Week_9_Fresh = GCLAR_week9_fresh_ASVs,
-                                                       FLAR_Week_9_Fresh = FLAR_week9_fresh_ASVs)) +
-  scale_fill_gradient(low = "#FF69B4", high = "#FFE4E1") + # Plot aesthetics
+venn_plot_GCLAR_FLAR_week9_fresh <- ggVennDiagram(x = list(A = GCLAR_week9_fresh_ASVs,
+                                                       B = FLAR_week9_fresh_ASVs), label_size = 100) +
+  scale_fill_gradient(low = "white", high = "blue", limits = c(0, 100)) + # Plot aesthetics
   scale_x_continuous(expand = expansion(mult = .1))
 
 # Save the Venn diagram as a png
-ggsave(filename = "core_microbiome_GCLAR_FLAR_week9_fresh.png", plot = venn_plot_GCLAR_FLAR_week9_fresh , width = 7, height = 7)
+ggsave(filename = "core_microbiome_GCLAR_FLAR_week9_fresh.png", plot = venn_plot_GCLAR_FLAR_week9_fresh , width = 11, height = 11)
 
 #GCLAR FLAR WEEK 9 necropsy
-venn_plot_GCLAR_FLAR_week9_Necropsy <- ggVennDiagram(x = list(GCLAR_Week_9_Necropsy = GCLAR_week9_necropsy_ASVs,
-                                                           FLAR_week9_Necropsy = FLAR_week9_necropsy_ASVs)) +
-  scale_fill_gradient(low = "#FF69B4", high = "#FFE4E1") + # Plot aesthetics
+venn_plot_GCLAR_FLAR_week9_Necropsy <- ggVennDiagram(x = list(GCLAR_Week_9_N = GCLAR_week9_necropsy_ASVs,
+                                                           FLAR_week9_N = FLAR_week9_necropsy_ASVs), label_size = 100) +
+  scale_fill_gradient(low = "white", high = "blue", limits = c(0, 100)) + # Plot aesthetics
   scale_x_continuous(expand = expansion(mult = .1))
 
 # Save the Venn diagram as a png
-ggsave(filename = "core_microbiome_GCLAR_FLAR_week9_necropsy.png", plot = venn_plot_GCLAR_FLAR_week9_Necropsy, width = 7, height = 7)
+ggsave(filename = "core_microbiome_GCLAR_FLAR_week9_necropsy.png", plot = venn_plot_GCLAR_FLAR_week9_Necropsy, width = 11, height = 11)
 
 #GCLAR WEEK 0, 4.5, 9 fresh
-venn_plot_GCLAR_week0_9_fresh <- ggVennDiagram(x = list(GCLAR_Week_9_Fresh = GCLAR_week9_fresh_ASVs,
+venn_plot_GCLAR_week0_9_fresh <- ggVennDiagram(x = list(GCLAR_Week_9_F = GCLAR_week9_fresh_ASVs,
                                                         GCLAR_Week_0 = GCLAR_week0_ASVs,
-                                                        GCLAR_Week_4_5 = GCLAR_week4_5_ASVs)) +
-  scale_fill_gradient(low = "#FF69B4", high = "#FFE4E1") + # Plot aesthetics
-  scale_x_continuous(expand = expansion(mult = .1))
+                                                        GCLAR_Week_4_5 = GCLAR_week4_5_ASVs), label_size = 100) +
+  scale_fill_gradient(low = "white", high = "blue", limits = c(0, 100)) + # Plot aesthetics
+  scale_x_continuous(expand = expansion(mult = 0.01))
 
 # Save the Venn diagram as a png
-ggsave(filename = "core_microbiome_GCLAR_week0_9_fresh.png", plot = venn_plot_GCLAR_week0_9_fresh, width = 7, height = 7)
+ggsave(filename = "core_microbiome_GCLAR_week0_9_fresh.png", plot = venn_plot_GCLAR_week0_9_fresh, width = 11, height = 11)
 
 #GCLAR WEEK 0, 4.5, 9 NECROPSY
-venn_plot_GCLAR_week0_9_necropsy <- ggVennDiagram(x = list(GCLAR_Week_9_Necropsy = GCLAR_week9_necropsy_ASVs,
+venn_plot_GCLAR_week0_9_necropsy <- ggVennDiagram(x = list(GCLAR_Week_9_N = GCLAR_week9_necropsy_ASVs,
                                                         GCLAR_Week_0 = GCLAR_week0_ASVs,
                                                         GCLAR_Week_4_5 = GCLAR_week4_5_ASVs)) +
-  scale_fill_gradient(low = "#FF69B4", high = "#FFE4E1") + # Plot aesthetics
+  scale_fill_gradient(low = "white", high = "blue", limits = c(0, 100)) + # Plot aesthetics
   scale_x_continuous(expand = expansion(mult = .1))
 
 # Save the Venn diagram as a png
-ggsave(filename = "core_microbiome_GCLAR_week0_9_necropsy.png", plot = venn_plot_GCLAR_week0_9_necropsy, width = 7, height = 7)
+ggsave(filename = "core_microbiome_GCLAR_week0_9_necropsy.png", plot = venn_plot_GCLAR_week0_9_necropsy, width = 11, height = 11)
 
 #FISST VS GISST 
 venn_plot_FISST_GCISST <- ggVennDiagram(x = list(FISST = FISST_ASVs,
-                                                GCISST = GCISST_ASVs)) +
-  scale_fill_gradient(low = "#FF69B4", high = "#FFE4E1") + # Plot aesthetics
+                                                GCISST = GCISST_ASVs), label_size = 10) +
+  scale_fill_gradient(low = "white", high = "blue", limits = c(0, 100)) + # Plot aesthetics
   scale_x_continuous(expand = expansion(mult = .1))
 
 # Save the Venn diagram as a png
-ggsave(filename = "core_microbiome_FISST_GCISST.png", plot = venn_plot_FISST_GCISST, width = 7, height = 7)
+ggsave(filename = "core_microbiome_FISST_GCISST.png", plot = venn_plot_FISST_GCISST, width = 11, height = 11)
 
 # Rarefy samples
 # rngseed sets a random number to sample. If you want to reproduce this exact analysis, you need
