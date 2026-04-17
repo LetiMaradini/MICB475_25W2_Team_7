@@ -30,10 +30,16 @@ Anson Mo, Eric Ai, Kira Wong, Leticia Maradini, Lila Bullock
 
 [RStudio Phyloseq object](Scripts/Phyloseq_object.R)
 
-[Aim 1 - Diversity Analysis](Scripts/Diversity_Analysis.Rhistory)
+[Aim 1 - Diversity Analysis](Scripts/Diversity_analysis.R)
 
-[Aim 3 - Indicator Species](Scripts/Indicator_taxa_final_0.07.R)
+[Aim 2 - Core Microbiome](Scripts/core_microbiome.R)
 
-[Aim 4 - DESeq](Scripts/DESeq.R)
+[Aim 3 - Indicator Species](Scripts/Indicator_taxa_final_0.05.R)
+
+[Aim 4 - Differential Abundance (DESeq2)](Scripts/DESeq.R)
+
+[Aim 5 - Machine Learning (Random Forest)](Scripts/RFresult_exposed_unexposed.R)
+
+
 
 
