@@ -238,7 +238,7 @@ run_test_2group <- function(ps_obj, targets, group_col, title, use_wunifrac = TR
 
 
 ### Integration with other analyses
-- 
+
 - Combining these approaches provides a **more complete understanding of microbiome responses**
 
 ---
