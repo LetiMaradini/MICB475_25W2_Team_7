@@ -15,14 +15,16 @@ Data Loading & Preprocessing
 
     Loaded phyloseq object micro_final from micro_final.RData.
     performed microbiome analysis on above groups with detection and abundance levels set to 0.001 and 0.1, respectively
+
+Code: 
+    [Core Microbiome code](../Scripts/core_microbiome.R)
     
-Output files:
+Output files: 
+    5 different files for use: core microbiome venn diagrams for above comparison groups. [venn diagrams](../Images/RStudio/Aim_2) 
 
-    5 different files for use: core microbiome venn diagrams for above comparison groups. 
-
-Results:
-
+Results: 
 Check output files
+
 Discussion:
 
 N/A
